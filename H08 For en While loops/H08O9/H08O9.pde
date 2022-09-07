@@ -1,0 +1,25 @@
+int a = 0;
+int b = 1;
+int c = 1;
+int d = b+c;
+int e = c+d;
+int f = d+e;
+int g = e+f;
+int h = f+g;
+int i = g+h;
+int j = h+i;
+int k = i+j;
+int l = j+k;
+int m = k+l;
+
+println (c= int( a+b ));
+println (d= int( b+c ));
+println (e= int( c+d ));
+println (f= int( d+e ));
+println (g= int( e+f ));
+println (h= int( f+g ));
+println (i= int( g+h ));
+println (j= int( h+i ));
+println (k= int( i+j ));
+println (l= int( j+k ));
+println (m= int( k+l ));
