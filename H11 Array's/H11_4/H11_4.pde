@@ -1,9 +1,8 @@
-int [] bruharray = {1, 10, 100, 10, 999, 420, 69};
-String [] stringarray;
+int oudste = 0;
+int [] leeftijden = {10, 12, 51, 100, 20};
 
 void setup(){
-  for(int i = 0; i < bruharray.length; i++){
-    bruharray[i] = i * 12 + 12;
+  for (int i = 0; i < leeftijden.length; i++){
+  
   }
-  println(bruharray);
 }
