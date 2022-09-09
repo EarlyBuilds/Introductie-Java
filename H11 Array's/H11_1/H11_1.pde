@@ -1,11 +1,7 @@
-int [] bruharray;
-String [] stringarray;
+int [] bruharray = new int [26];
 
 void setup(){
-  bruharray = new int [1];
-  stringarry = new String ["wow"]
-  if () {
-  println ("nice");
-  }
+  println (bruharray);
+  
   
 }
