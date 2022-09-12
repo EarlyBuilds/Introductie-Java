@@ -1,4 +1,4 @@
-int zoekNummer = 9;
+String zoekNummer = "bruh";
 boolean gevonden = false;
 int index = 0;
 int positie = 0;
