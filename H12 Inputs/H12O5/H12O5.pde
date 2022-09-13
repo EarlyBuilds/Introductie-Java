@@ -4,7 +4,6 @@ int Xloc = 0;
 
 void setup (){
   size(800,800);
-  background(0,0,0);
 }
 
 void draw(){
@@ -15,13 +14,15 @@ void mousePressed(){
   println (mouseX,mouseY);
   if(amountPressed == 1){
     fill(255,255,255);
-    line(Xloc,Yloc,mouseY,mouseX);
+    line(Xloc,Yloc,mouseX,mouseY);
+    println(Xloc,Yloc,mouseX,mouseY);
     amountPressed = 0;
-    println("bruh");
+    println("2");
   }else{
     amountPressed ++;
     Yloc = mouseY;
     Xloc = mouseX;
+    println("1");
   }
   
 }
