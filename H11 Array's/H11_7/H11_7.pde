@@ -1,4 +1,5 @@
 import controlP5.*;
+String[] bruhArray = new String [10];
 String tekst;
 int prijs = 0;
 int BTW = 21;
@@ -34,8 +35,6 @@ void draw(){
 
 void Knop1(){
   tekst =(tekstveld1.getText());
-  prijs = int(tekst);
-  prijsWbtw = (prijs/100*BTW)+prijs;
-  println (prijs);
-  println(prijsWbtw);
+  println ("Het tekst: " + tekst + " is toegevoegt aan het array");
+  
 }
