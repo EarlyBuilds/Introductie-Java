@@ -1,10 +1,10 @@
-String zoekNaam = "Jan";
+int zoekGetal = 20;
 int gevonden = 0;
-String[] namen = {"Bruh", "Minecraft", "CSGO", "Jan", "Piet", "Wouter", "202"};
+int[] getallen = {9, 20, 15, 20, 19, 15, 90, 20, 12, 10};
 
 void setup(){
-  for(int i = 0; i < namen.length; i++){
-   if(zoekNaam == namen [i]){
+  for(int i = 0; i < getallen.length; i++){
+   if(zoekGetal == getallen [i]){
    gevonden++;
    }
   }
