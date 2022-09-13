@@ -1,8 +1,9 @@
-int seconden;
+int seconden = 0;
 int leftAmount;
 int millisLeft;
 int aantalSpaties = 0;
 boolean racing = true;
+boolean canStart = false;
 
 void setup(){
   size(500,500);
@@ -28,8 +29,7 @@ void draw(){
 }
 
 void keyReleased(){
-  if(keyCode == 32 && racing){
-    aantalSpaties++;
+  canStart != canStart;
   }
 
 }
