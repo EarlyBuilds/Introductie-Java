@@ -1,9 +1,7 @@
 import controlP5.*;
 String[] bruhArray = new String [10];
 String tekst;
-int prijs = 0;
-int BTW = 21;
-int prijsWbtw = 0;
+int keergeklikt = 0;
 ControlP5 cp;
 
 Button knop1;
@@ -24,7 +22,7 @@ void setup(){
                 .setText("Prijs is...")
                 .setSize(300,100)
                 .setFont(100)
-                .setCaptionLabel("Voer in het prijs...")
+                .setCaptionLabel("Tekst hier...")
                 .setColorLabel(color(255,100,100));
 }
 
@@ -35,6 +33,8 @@ void draw(){
 
 void Knop1(){
   tekst =(tekstveld1.getText());
-  println ("Het tekst: " + tekst + " is toegevoegt aan het array");
-  
+  println ("Het tekst: '" + tekst + "' is toegevoegt aan het array");
+  bruhArray [keergeklikt] = tekst;
+  println (bruhArray);
+  keergeklikt ++;
 }
