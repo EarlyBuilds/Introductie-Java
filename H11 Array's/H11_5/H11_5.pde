@@ -1,21 +1,17 @@
-String zoekNaam = "bruh";
-boolean gevonden = false;
-int index = 0;
-int positie = 0;
-int[] Namen = {10,9,8,1,11,99,21,44,33,8,44,9};
+String zoekNaam = "Jan";
+Boolean gevonden = false;
+String[] namen = {"Bruh", "Minecraft", "CSGO", "Jan", "Piet", "Wouter", "202"};
 
 void setup(){
- for(int i = 0; i < Getallen.length; i++){
-   if(Getallen[i] == zoekNaam){
+  for(int i = 0; i < namen.length; i++){
+   if(zoekNaam == namen [i]){
    gevonden = true;
-   index = i;
-   positie = i + 1;
    }
- }
- 
- if (gevonden){
-   println("Getal gevonden op index " + index + " prositie is op " + positie);
- }else{
-   println("niet gevonden!");
- }
+  }
+  
+  if(gevonden){
+    println("naam is gevonden in het lijst " + zoekNaam);
+  }else{
+    println("Helaas is het naam niet in het lijst");
+  }
 }
