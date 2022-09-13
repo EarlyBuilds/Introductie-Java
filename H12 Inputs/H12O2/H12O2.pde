@@ -23,13 +23,13 @@ void draw(){
     racing = false;
   }
   fill(0,0,0);
-  text("Spaties " + aantalSpaties, 200,200);
-  text("Seconds left " + leftAmount + "." + nf(millisLeft, 3), 200,200);
+  text("Spaties: " + aantalSpaties, 200,200);
+  text("Seconds left " + leftAmount + "." + nf(millisLeft, 3), 200,220);
 }
 
 void keyReleased(){
   if(keyCode == 32 && racing){
-    
+    aantalSpaties++;
   }
 
 }
