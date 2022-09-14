@@ -21,11 +21,13 @@ void resetgame() {
 }
 
 void draw() {
+  println(speedX);
   background(0);
   ellipse(x, y, diam, diam);
   /*
   rect(0, 0, 20, height);
   */
+  //DRAW PLAYER 1
   rect(width-30, mouseY-rectSize/2, 10, rectSize);
   //DRAW PLAYER2
   rect(20, play2PosY, 10, rectSize);
@@ -33,13 +35,16 @@ void draw() {
   x += speedX;
   y += speedY;
   //player1 Collision
-  if ( x > width-30 && x < width -20 && y > mouseY-rectSize/2 && y < mouseY+rectSize/2 ) {
+  if ( x > width-30  && y > mouseY-rectSize/2 && y < mouseY+rectSize/2 ) {
     speedX = speedX * -1;
   } 
   //PLAYER2 collision
-  if ( x > 30 && x < 30 && y > play2PosY-rectSize/2 && y < play2PosY+rectSize/2 ) {
+  if ( x < 40 && y > play2PosY && y < play2PosY+rectSize ) {
     speedX = speedX * -1;
+    println("hit");
   } 
+  
+  //top & bottom screen
   if ( y > height || y < 0 ) {
     speedY *= -1;
   }
