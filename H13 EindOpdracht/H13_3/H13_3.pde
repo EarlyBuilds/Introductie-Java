@@ -37,6 +37,6 @@ void draw() {
   }
 }
 
-void mousePressed() {
+void keyPressed() {
   reset();
 }
