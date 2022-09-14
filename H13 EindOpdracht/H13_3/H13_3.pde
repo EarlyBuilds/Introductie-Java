@@ -13,7 +13,10 @@ void setup() {
 void resetgame() {
   x = width/2;
   y = height/2;
-  speedX = random(3, 5);
+  speedX = random(0, 5);
+  if(speedX < 3){
+  speedX = random(-5,-3);
+  }
   speedY = random(-5, 5);
 }
 
@@ -34,7 +37,7 @@ void draw() {
     speedX = speedX * -1;
   } 
   //PLAYER2 collision
-  if ( x > 20 && x < 20 && y > play2PosY-rectSize/2 && y < play2PosY+rectSize/2 ) {
+  if ( x > 30 && x < 30 && y > play2PosY-rectSize/2 && y < play2PosY+rectSize/2 ) {
     speedX = speedX * -1;
   } 
   if ( y > height || y < 0 ) {
