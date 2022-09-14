@@ -14,7 +14,7 @@ void resetgame() {
   x = width/2;
   y = height/2;
   speedX = random(3, 5);
-  speedY = random(3, 5);
+  speedY = random(-5, 5);
 }
 
 void draw() {
@@ -33,15 +33,10 @@ void draw() {
   if ( x > width-30 && x < width -20 && y > mouseY-rectSize/2 && y < mouseY+rectSize/2 ) {
     speedX = speedX * -1;
   } 
-  //PLAYER2
-  if ( x > width-30 && x < width -20 && y > play2PosY-rectSize/2 && y < play2PosY+rectSize/2 ) {
+  //PLAYER2 collision
+  if ( x > 20 && x < 20 && y > play2PosY-rectSize/2 && y < play2PosY+rectSize/2 ) {
     speedX = speedX * -1;
   } 
-  if (x < 25) {
-    speedX *= -1.1;
-    speedY *= 1.1;
-    x += speedX;
-  }
   if ( y > height || y < 0 ) {
     speedY *= -1;
   }
@@ -54,7 +49,6 @@ void keyPressed() {
   if(keyCode == 38){
     play2PosY = play2PosY - snelHeid;
   }
-  println(keyCode);
   if(keyCode == 32){
     resetgame();
   }
