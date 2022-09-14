@@ -5,10 +5,10 @@ float rectSize = 200;
 void setup() {
   size (1280,720);
   fill(255, 255, 255);
-  reset();
+  resetgame();
 }
 
-void reset() {
+void resetgame() {
   x = width/2;
   y = height/2;
   speedX = random(3, 5);
@@ -38,5 +38,5 @@ void draw() {
 }
 
 void keyPressed() {
-  reset();
+  resetgame();
 }

@@ -1,10 +1,9 @@
 import controlP5.*;
 String[] bruhArray = new String [10];
-String tekst;
-int keergeklikt = 0;
-int pos = 0;
-int basePosX = 0;
-int basePosY = 0;
+int nummer;
+int offSetY = 100;
+int offSetX = 0;
+int RightSSize = 500;
 
 ControlP5 cp;
 
@@ -22,26 +21,41 @@ void setup(){
 
   tekstveld1 = cp
                 .addTextfield("TextInput1")
-                .setPosition(100,100)
-                .setText("Prijs is...")
-                .setSize(300,100)
-                .setFont(100)
-                .setCaptionLabel("Tekst hier...")
+                .setPosition(10,50)
+                .setText("10")
+                .setSize(100,25)
+                .setCaptionLabel("Nummer hier...")
                 .setColorLabel(color(255,100,100));
+  //horizonline              
+  line((offSetX + 10),(offSetY + 0),(offSetX + RightSSize),(offSetY + 0));
+  line((offSetX + 10),(offSetY + 50),(offSetX + RightSSize),(offSetY + 50));
+  //verticalline
+  line(10,offSetY,10,150);
+  line((offSetX + RightSSize),offSetY,(offSetX + RightSSize),150);
 }
 
 
 void draw(){
-  while (bruhArray.length != pos){
-    text(bruhArray [pos],basePosX,basePosY);
-    pos++;
-  }
+
 }
 
 void Knop1(){
-  tekst =(tekstveld1.getText());
-  println ("Het tekst: '" + tekst + "' is toegevoegt aan het array");
-  bruhArray [keergeklikt] = tekst;
-  println (bruhArray);
-  keergeklikt ++;
+  fill(0);
+  textSize(20);
+  nummer = int (tekstveld1.getText());
+  println (nummer);
+  if(nummer != 0){
+    println("valid");
+    text (nummer,(offSetX + 20), (offSetY + 25));
+    text ((nummer*2),(offSetX + 50), (offSetY + 25));
+    text ((nummer*3),(offSetX + 100), (offSetY + 25));
+    text ((nummer*4),(offSetX + 150), (offSetY + 25));
+    text ((nummer*5),(offSetX + 200), (offSetY + 25));
+    text ((nummer*6),(offSetX + 250), (offSetY + 25));
+    text ((nummer*7),(offSetX + 300), (offSetY + 25));
+    text ((nummer*8),(offSetX + 350), (offSetY + 25));
+    text ((nummer*9),(offSetX + 400), (offSetY + 25));
+    text ((nummer*10),(offSetX + 450), (offSetY + 25));
+  }
+  
 }
